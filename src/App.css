@@ -148,6 +148,11 @@ p.muted.example {
 
 .meaning .synonyms {
   margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.synonyms p {
+  margin-bottom: 0;
 }
 
 ul li::marker {
@@ -160,11 +165,12 @@ ul li::marker {
 }
 
 .source {
-  border-top: 1px solid var(--light300);
+  border-top: 1px solid var(--borderColor);
   display: flex;
   height: 43px;
   align-items: end;
   gap: 1.5rem;
+  margin-bottom: 23px;
   margin-top: -33px;
 }
 
@@ -177,4 +183,48 @@ ul li::marker {
 .source a {
   color: var(--fontColor);
   font-size: 14px;
+}
+
+@media (max-width: 1200px) {
+  .app {
+    width: 90%;
+  }
+}
+
+@media (max-width: 500px) {
+  h2 {
+    font-size: 32px;
+  }
+  .word p {
+    font-size: 18px;
+  }
+  h3 {
+    font-size: 18px;
+  }
+  .meaning ul {
+    padding-left: 1rem;
+  }
+
+  .meaning p {
+    font-size: 16px !important;
+  }
+
+  li {
+    font-size: 15px;
+  }
+
+  input[type='text'] {
+    font-size: 16px;
+  }
+
+  p.muted.example {
+    font-size: 15px;
+    margin-left: 1rem;
+  }
+  .synonyms button {
+    font-size: 16px;
+  }
+  .dropdown-toggle {
+    font-size: 14px;
+  }
 }
