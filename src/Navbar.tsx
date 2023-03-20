@@ -57,7 +57,7 @@ const Navbar = () => {
           onSelect={handleOnSelect}
         />
         <span className="test"></span>
-        <label className="switch">
+        <label className="switch" htmlFor="darkTheme">
           <label htmlFor="darkTheme"></label>
           <input
             type="checkbox"
