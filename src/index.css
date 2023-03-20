@@ -55,11 +55,7 @@
 */
 html,
 body {
-  font-family: var(--font);
   height: 100%;
-  font-size: 18px;
-  background-color: var(--backgroundColor);
-  color: var(--fontColor);
 }
 /*
   Typographic tweaks!
@@ -67,6 +63,10 @@ body {
   5. Improve text rendering
 */
 body {
+  font-family: var(--font);
+  font-size: 18px;
+  background-color: var(--backgroundColor);
+  color: var(--fontColor);
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }

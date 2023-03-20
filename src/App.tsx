@@ -57,11 +57,13 @@ function App(): JSX.Element {
   };
 
   return (
-    <div className="app">
+    <main className="app">
       <Navbar />
       <form id="search-form" onSubmit={handleSubmit}>
         <div className="searchbar">
+          <label htmlFor="searchInput"></label>
           <input
+            id="searchInput"
             type="text"
             value={input}
             onChange={(e) => setInput(e.target.value)}
@@ -90,7 +92,7 @@ function App(): JSX.Element {
       {notFound && <NotFoundPage />}
       {data &&
         data.map((result) => (
-          <div key={result.word} className="result">
+          <section key={result.word} className="result">
             <div className="word">
               <h2>{result.word}</h2>
               {result.phonetics.map((phonetic) => {
@@ -153,9 +155,9 @@ function App(): JSX.Element {
                 <a href={source}>{source}</a>
               </div>
             ))}
-          </div>
+          </section>
         ))}
-    </div>
+    </main>
   );
 }
 
