@@ -1,0 +1,67 @@
+.dropdown-menu {
+  position: relative;
+}
+
+.dropdown-toggle {
+  color: var(--fontColor);
+  background-color: transparent;
+  border: transparent;
+  cursor: pointer;
+  display: flex;
+  font-weight: 700;
+  align-items: center;
+  gap: 1rem;
+}
+
+.dropdown-toggle:hover {
+  text-decoration: underline;
+}
+
+.dropdown-list {
+  background-color: var(--dropDownColor);
+  position: absolute;
+  right: 0;
+  z-index: 100;
+  margin-top: 1rem;
+  padding: 0 1.5rem;
+  /* padding-top: 1.5rem; */
+  font-weight: 700;
+  padding-right: 4rem;
+  border-radius: 20px;
+  list-style: none;
+  width: max-content;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.dropdown-list.open {
+  height: 150px;
+  max-height: 200px;
+  /* box-shadow: rgba(var(--dropShadowColor), 0.16) 0px 10px 36px 0px,
+    rgba(var(--dropShadowColor), 0.06) 0px 0px 0px 1px; */
+  box-shadow: rgba(var(--dropShadowColor)) 0px 5px 20px 10px;
+  padding: 0 1.5rem;
+  padding-right: 4rem;
+}
+
+.dropdown-list li {
+  cursor: pointer;
+}
+
+.dropdown-list li:nth-child(2) {
+  font-family: lora;
+}
+
+.dropdown-list li:nth-child(3) {
+  font-family: inconsolata;
+}
+
+.dropdown-list li:hover,
+.dropdown-list li:focus-visible {
+  color: var(--accent);
+}
